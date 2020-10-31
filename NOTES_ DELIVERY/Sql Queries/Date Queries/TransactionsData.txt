@@ -1,0 +1,6 @@
+create sequence Transaction_No
+start with 1
+increment by 1
+maxvalue 999;
+
+Insert into transaction Values (Transaction_No.nextval,'deposit',2000,02, to_date('2020-03-21', 'yy-mm-dd'));

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+
+<category>
+  <pattern>* TRANSACTION</pattern>
+  <template>
+   
+    IsRegistered 
+  </template>
+</category>
+ 
+
+
+<category>
+  <pattern>BankerIs *</pattern>
+  <template>
+		<think><set name="var1"><star index="1"/></set></think>
+    
+    <condition name="var1" value="x">You can't make transactions , please go to the bank !</condition>
+    
+    <condition name="var1" value="y">
+    <random><li>What is Card Number ?</li><li>Enter Card Number. </li></random> 
+      
+    
+    </condition>
+
+  </template>
+</category>
+  
+<category>   
+  <pattern>PinNo</pattern>
+  <template>
+      <random><li>What is the Card pin number ?</li><li>Enter Card pin number</li></random>
+  </template>
+</category>
+  
+<category>    
+  <pattern>TransType</pattern>
+  <template>
+  <random>
+    <li>What is your transaction type ?</li>
+    <li>Do you want to deposit or withdraw money ? </li>
+  </random> 
+  </template>
+</category>
+  
+<category>    
+  <pattern>* Deposit *</pattern>
+  <template>
+    D
+  </template>
+</category>
+  
+<category>    
+  <pattern>* Withdraw *</pattern>
+  <template>
+    W
+  </template>
+</category>
+  
+<category>    
+  <pattern>DoTrans *</pattern>
+  <template>
+    
+  	<think><set name="var4"><star index="1"/></set></think>
+    
+    <condition name="var4" value="D">
+      <random><li>How much money you want to Deposit ?</li><li>Enter The amount of money to Deposit. </li></random> 
+    </condition>
+    <condition name="var4" value="W">
+      <random><li>How much money you want to Withdraw ?</li><li>Enter The amount of money to Withdraw. </li></random>
+    </condition>
+  
+  </template>
+</category>
+</aiml>

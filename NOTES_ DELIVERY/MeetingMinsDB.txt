@@ -1,0 +1,76 @@
+THE DELIVERY DEDLINE :: 15/4/2020.
+- COMPLETE GUI FOR SYSTEM  ->  Amina "8/4"
+Banking Chatbot System : (Functions)
+
+********************************* System Functionalties ********************************
+
+= LogIn (AS USER  : CardNo, PIN).  //NOTE (ADD PIN No. To Card Table)
+            (AS BANKER : BnakerID, Password)//NOTE (ADD PASS. To Banker Table)  (Thomas). "6/4"
+
+= Automaticly Generate a Payemt For Spacific Loan per #Month. (Ramez). "6/4"
+
+*********************************** User Functionalties *******************************
+= View His/Her Data (Client, Account Tables).  (Options) (Lotfy) "6/4" -(Button inChat)
+= View Credit Card (Card Table). (Options) (Lotfy) "6/4"  -(inChat)
+= View His/Her Transaction per Month (Trans. Table). (Options) (Lotfy) "6/4"   -(Button inChat)
+= LogOut From System. (Moris)"6/4" (Button in List Option)
+= Switching Accounts. (Option) (Moris)"6/4" (Button in List Option)
+
+********************************** Banker Functionalties *****************************
+
+= Register New Banker. (Banker Table) //(All Bankers Can Make a Registeration) (Thomas). "6/4" -(Button inChat(Open New Form))
+= Register New Client With His/Her Accounts.(Client & Account & Card Table)  -(Button inChat(Open New Form))
+			"(NOTE : Only One Account From Same Type)". (Thomas). "6/4"
+= Update The Client Data & Account Data. (Client Table & Account "Just The Valid Data (ex. Email & Pass)") (Ramez) "6/4" (Button in List Option)
+= Update His/Her Banker Data. (Banker Table).  (Ramez)  "6/4" (Button in List Option)
+= Delete The Client Account. (Client & Account & Card Table ). (Lotfy) "6/4" (Button in List Option)
+
+= Search For Spacific Client To View & Update & Delete  (By Client NationalID). (Amina) "6/4" (Button in List Option)
+= Search For Spacific Account  To View & Update & Delete  (By Client NationalID). (Amina) "6/4" (Button in List Option)
+= Search For Spacific Card To View (By Client NationalID). (Amina) "6/4" (Button in List Option)
+
+= Make a Transaction  (By Client AccountID, CardNo). (Moris)  "6/4"  -(Button inChat (In Same Form)).
+
+= Request a Loan (By AccountID).(Lotfy)"6/4". -(Button inChat (In Same Form)).
+
+************************************SYSTEM NOTES*********************************
+----------------------------------------------------------- Database Note ------------------------------------------------ (Lotfy & Amina).
+= Add New Table To ERD ("Account Type"). ->AccountTypeName(PK), AccountLimit, 		WithdrawLimt,DepositLimit. (Reation With Account Table) (1-1) (Static Data). (DONE)
+= Modify The ClientSSN Attrib. To ClientID -> ADD CardSSN To Card Table.(DONE)
+= Modify The Transaction Table By Adding "CurruntAccountBalance". (DONE)
+= Modify The Loan Table By Adding "InstallmentMonths"(#Months ll taQset) & LoanDate. (DONE)
+= NationalID (Banker & Client) : Unique.(DONE)
+= Remove Balance Limit from The Card Table. (DONE)
+= Account Type Table (Static Data) : (DONE)
+- Student Account. AccountLimit(20000),WithdrawLimit(5000),DepositLimit(5000).
+- PrePaid Account.AccountLimit(500000),WithdrawLimit(10000),DepositLimit(50000)
+- Bussnius Account.AccountLimit(1000000),WithdrawLimit(50000),DepositLimit(250000)
+
+= Transaction Type: (DONE)
+	- Withdraw.
+	- Deposit.
+
+----------------------------------------------------------- Constrains Note ------------------------------------------------
+= Any Account Can Not Make a Loan  < 2 * His/Her Max(AccountBalance) 
+				& Made at Least 10 Transaction (ex. deposit money > withdraw money).   
+= Every month in loan installment for payment (Loan /#months =(L Qest Elwa7ed)).
+
+
+***************************************EXTRA-WORK***********************************
+= Transfer Table 
+= Communicate with Banker ->. (Chating Between Banker & Client). (Moris)"6/4"
+= Send a Feedback (Chating). (Moris)"6/4"
+
+= Response For Feedback. (Chatting). (Moris)"6/4"
+= Response For Comuncation. (Chatting). (Moris)"6/4"
+
+*************************************Crystal Report *************************************
+**************** VIEW Without Where & Disconnected (Search Functions) ****************
+- THE FINAL DEDLINE :: 9/4/2020.
+
+***************************************** Forms ****************************************
+= LOGIN_Form (Use it By Banker/Client) 
+= Chatbot_Form For User.
+= Registration New Banker Form.
+= Registration New Client Form.
+= Banker Functionaties Form (For Viewing & Update & Delete (Handlling Data)) (Form Button in List Option).

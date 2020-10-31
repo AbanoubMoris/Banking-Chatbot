@@ -1,0 +1,7 @@
+create sequence Payment_No
+start with 1
+increment by 1
+maxvalue 999;
+
+
+Insert into Payment Values (Payment_No.nextval,3000, to_date('2020-03-25', 'yy-mm-dd'),02);

@@ -1,0 +1,6 @@
+create sequence Client_SSN
+start with 1
+increment by 1
+maxvalue 99;
+
+Insert into Banker Values (Banker_ID.nextval,'Saied','Hesham',30003249739204,01083927463,'Ismalia, Egypt','M');

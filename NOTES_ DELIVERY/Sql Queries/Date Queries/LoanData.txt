@@ -1,0 +1,6 @@
+create sequence Loan_No
+start with 1
+increment by 1
+maxvalue 999;
+
+Insert into Loan Values (Card_No.nextval,75000, 25000,02);

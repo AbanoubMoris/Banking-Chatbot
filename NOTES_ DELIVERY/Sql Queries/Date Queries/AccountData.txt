@@ -1,0 +1,6 @@
+create sequence Account_ID
+start with 1
+increment by 1
+maxvalue 99;
+
+Insert into Account Values (Account_ID.nextval,2000,'sekjer321$','mahmed32@outlook.com','Internactional',005);

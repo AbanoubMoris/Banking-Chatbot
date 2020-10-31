@@ -1,0 +1,7 @@
+create sequence Card_No
+start with 1
+increment by 1
+maxvalue 9999999999999;
+
+
+Insert into Card Values (Card_No.nextval,75000, to_date('2020-05-25', 'yy-mm-dd'),2000,02);

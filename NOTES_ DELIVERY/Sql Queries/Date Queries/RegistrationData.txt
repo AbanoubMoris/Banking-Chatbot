@@ -1,0 +1,1 @@
+Insert into Registration Values (05,02);

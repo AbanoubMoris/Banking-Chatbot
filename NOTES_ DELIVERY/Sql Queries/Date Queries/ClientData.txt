@@ -1,0 +1,9 @@
+create sequence Client_SSN
+start with 4
+increment by 1
+maxvalue 999;
+
+
+Insert into Client Values (Client_SSN.nextval,'Mostafa','Khaled',0106833243,'M','Giza, Egypt',200043892843839);
+Insert into Client Values (Client_SSN.nextval,'Ahmed','Mohammed',0106833823,'M','Cairo, Egypt',200043892634839);
+Insert into Client Values (Client_SSN.nextval,'Mona','Mohammed',0106833123,'F','Cairo, Egypt',200043833234839);

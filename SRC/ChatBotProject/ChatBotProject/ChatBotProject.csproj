@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F22DF2D-9238-4268-ABBB-2364E3C718E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChatBotProject</RootNamespace>
+    <AssemblyName>ChatBotProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AIMLbot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AIMLbot.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\app\AminaA\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankerFnsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankerFnsForm.Designer.cs">
+      <DependentUpon>BankerFnsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankerInfoForm.Designer.cs">
+      <DependentUpon>BankerInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankerRegisterForm.Designer.cs">
+      <DependentUpon>BankerRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BubbleUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BubbleUC.Designer.cs">
+      <DependentUpon>BubbleUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatBotForm.Designer.cs">
+      <DependentUpon>ChatBotForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientInfoForm.Designer.cs">
+      <DependentUpon>ClientInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientRegisterForm.Designer.cs">
+      <DependentUpon>ClientRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTotalBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientTotalBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReportForm.Designer.cs">
+      <DependentUpon>CrystalReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="GenerateLoanPayment.cs" />
+    <Compile Include="Loan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Loan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionsDB.cs" />
+    <Compile Include="TransactionsPerMonth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionsPerMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ValidateAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidateAccountForm.Designer.cs">
+      <DependentUpon>ValidateAccountForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BankerFnsForm.resx">
+      <DependentUpon>BankerFnsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankerInfoForm.resx">
+      <DependentUpon>BankerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankerRegisterForm.resx">
+      <DependentUpon>BankerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BubbleUC.resx">
+      <DependentUpon>BubbleUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatBotForm.resx">
+      <DependentUpon>ChatBotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientInfoForm.resx">
+      <DependentUpon>ClientInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientRegisterForm.resx">
+      <DependentUpon>ClientRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTotalBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClientTotalBalance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportForm.resx">
+      <DependentUpon>CrystalReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Loan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TransactionsPerMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionsPerMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidateAccountForm.resx">
+      <DependentUpon>ValidateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diversity-Avatars-Avatars-Robot-02.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
